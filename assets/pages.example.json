@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "project": "Example Organisation",
+    "title": "Website Copy Review",
+    "date": "27 October 2026",
+    "site_url": "https://example.org",
+    "prepared_by": "ITSUP Ltd",
+    "scope": {
+      "copy": "Hardcoded copy in theme templates and site settings only. Blog posts and CMS-authored pages are excluded because they can be edited directly in the CMS without a code change.",
+      "markup": "Write suggested wording in the blank 'Suggested revision' column. Leave rows you are happy with blank.",
+      "content_state": "Extracted from the working copy of the theme on 27 October 2026. Site settings were taken from a local database snapshot, which may lag the live site."
+    },
+    "excluded": [
+      "Blog posts and CMS-authored pages (editable in the CMS)",
+      "Text inside images and PDFs"
+    ],
+    "empty_templates": [
+      {"file": "post.hbs", "reason": "Renders CMS content only"}
+    ]
+  },
+  "pages": [
+    {
+      "key": "SET",
+      "title": "Site settings & navigation",
+      "url": "All pages",
+      "source": "Ghost admin settings",
+      "note": "These words are set in the site's admin settings rather than in a page. They appear in browser tabs, search results and the menu on every page."
+    },
+    {
+      "key": "HOME",
+      "title": "Home page",
+      "url": "/",
+      "source": "home.hbs"
+    },
+    {
+      "key": "CAREERS",
+      "title": "Careers",
+      "url": "Not published",
+      "source": "custom-careers.hbs",
+      "note": "This template exists but no page currently uses it, so this copy is not visible on the live site."
+    },
+    {
+      "key": "FOOT",
+      "title": "Site footer",
+      "url": "All pages",
+      "source": "partials/footer.hbs",
+      "note": "Reusable block that appears at the bottom of every page. Review once."
+    }
+  ]
+}
